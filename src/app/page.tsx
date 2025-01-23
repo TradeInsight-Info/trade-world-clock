@@ -45,11 +45,13 @@ export default function Home() {
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col">
-        <p className="text-center pb-6 max-w-2xl">
+        <div className="justify-center max-w-2xl pb-6">
+        <div className="w-xl mx-auto text-center">
             <strong>Trade World Clock </strong>
              is a list of well known stock, option and future markets with their local time, 
             this tool is used to easily check the market open and close time in different timezones.
-        </p>
+        </div>
+        </div>
         <div>
           <Table>
             <TableCaption>
