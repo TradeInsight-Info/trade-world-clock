@@ -121,7 +121,7 @@ export default function Home() {
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://tradeinsight.info"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           <Image
             aria-hidden
@@ -131,6 +131,16 @@ export default function Home() {
             height={16}
           />
           from TradeInsight.info
+        </a>
+
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://github.com/TradeInsight-Info/trade-world-clock"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Source Codes on Github
         </a>
       </footer>
     </div>
