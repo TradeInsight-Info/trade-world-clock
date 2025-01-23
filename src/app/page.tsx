@@ -123,7 +123,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src="/favicon.ico"
             alt="Globe icon"
             width={16}
             height={16}
