@@ -16,13 +16,22 @@ import GreenDot from "@/components/nonClient/greenDot";
 import RedDot from "@/components/nonClient/redDot";
 import { Badge } from "@/components/ui/badge";
 
-export default function Home() {
+export default async function Home() {
   const stockMarkets = getStockMarkets();
+
+  // Server Action
+  async function getDate() {
+    'use server'
+    // Mutate data
+    const date = new Date();
+    return date;
+  }
+ 
+
+  const date = await getDate();
 
   stockMarkets.forEach((stock) => {
     const tz = stock.timezone;
-
-    const date = new Date();
     const theMoment = moment(date);
     const now = theMoment.clone().tz(tz);
 
