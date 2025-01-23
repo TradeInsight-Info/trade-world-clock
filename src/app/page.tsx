@@ -1,4 +1,4 @@
-import ClockTime from "@/components/nonClient/clockTime";
+import ClockTime from "@/components/client/clockTime";
 import Image from "next/image";
 import { getStockMarkets } from "@/lib/utils";
 import {
@@ -21,12 +21,11 @@ export default async function Home() {
 
   // Server Action
   async function getDate() {
-    'use server'
+    "use server";
     // Mutate data
     const date = new Date();
     return date;
   }
- 
 
   const date = await getDate();
 
@@ -55,11 +54,12 @@ export default async function Home() {
     <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col">
         <div className="justify-center max-w-2xl pb-6">
-        <div className="w-xl mx-auto text-center">
+          <div className="w-xl mx-auto text-center">
             <strong>Trade World Clock </strong>
-             is a list of well known stock, option and future markets with their local time, 
-            this tool is used to easily check the market open and close time in different timezones.
-        </div>
+            is a list of well known stock, option and future markets with their
+            local time, this tool is used to easily check the market open and
+            close time in different timezones.
+          </div>
         </div>
         <div>
           <Table>
@@ -102,12 +102,11 @@ export default async function Home() {
                     <TableCell>{stockMarket.city}</TableCell>
                     {/* <TableCell className="">{stock.timezone}</TableCell> */}
                     <TableCell className="text-right">
-                      <div className="flex flex-row flex items-center justify-center gap-4">
-                        <ClockTime timezone={stockMarket.timezone} />
-                        <div>
-                          {stockMarket.open ? <GreenDot /> : <RedDot />}
-                        </div>
-                      </div>
+                      <ClockTime
+                        timezone={stockMarket.timezone}
+                        startTime={stockMarket.startTime}
+                        endTime={stockMarket.endTime}
+                      />
                     </TableCell>
                   </TableRow>
                 );
@@ -148,7 +147,6 @@ export default async function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-
           Source Codes on Github
         </a>
       </footer>
