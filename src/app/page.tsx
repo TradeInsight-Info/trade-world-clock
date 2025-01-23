@@ -54,6 +54,11 @@ export default function Home() {
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col">
+        <p className="text-center pb-6 max-w-2xl">
+            <strong>Trade World Clock </strong>
+             is a list of well known stock, option and future markets with their local time, 
+            this tool is used to easily check the market open and close time in different timezones.
+        </p>
         <div>
           <Table>
             <TableCaption>
@@ -62,9 +67,10 @@ export default function Home() {
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[150px]">Name</TableHead>
+                <TableHead className="">Open Hours</TableHead>
                 <TableHead>Type</TableHead>
-                <TableHead>City, Country</TableHead>
-                <TableHead className="text-right">Local Time</TableHead>
+                <TableHead>City</TableHead>
+                <TableHead className="text-center">Local Time</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -77,6 +83,10 @@ export default function Home() {
                       <span className="text-xs font-light">
                         {stockMarket.name}
                       </span>
+                    </TableCell>
+                    <TableCell>
+                      <span className="">{stockMarket.startTime}</span> -
+                      <span className="">{stockMarket.endTime}</span>
                     </TableCell>
                     <TableCell>
                       {stockMarket.type.split(",").map((type, index) => {
