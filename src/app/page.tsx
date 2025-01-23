@@ -19,21 +19,12 @@ import { Badge } from "@/components/ui/badge";
 export default function Home() {
   const stockMarkets = getStockMarkets();
 
-  stockMarkets.forEach((stock, index) => {
+  stockMarkets.forEach((stock) => {
     const tz = stock.timezone;
 
     const date = new Date();
     const theMoment = moment(date);
     const now = theMoment.clone().tz(tz);
-    console.log(now);
-    // get hour and minute
-    const hour = now.format("HH");
-    const minute = now.format("mm");
-    console.log(hour, minute);
-
-    stock.now = now;
-
-    // console.log(stock.startTime, stock.name)
 
     const openHour = parseInt(stock.startTime.split(":")[0]);
     const openMinute = parseInt(stock.startTime.split(":")[1]);

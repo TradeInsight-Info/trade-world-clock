@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment-timezone";
 import { getUserTimeZoneInBrowser } from "@/lib/utils";
-import GreenDot from "../nonClient/greenDot";
 
 const NowTime = ({ timezone }: { timezone?: string }) => {
   const [currentTime, setCurrentTime] = useState<string>("");
