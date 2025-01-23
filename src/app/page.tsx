@@ -13,7 +13,6 @@ import {
 import moment from "moment-timezone";
 import NowTime from "@/components/client/nowtime";
 import GreenDot from "@/components/nonClient/greenDot";
-import RedDot from "@/components/nonClient/redDot";
 import { Badge } from "@/components/ui/badge";
 
 export default async function Home() {

@@ -1,6 +1,6 @@
 "use client";
 import moment, { Moment } from "moment-timezone";
-import { getUserTimeZoneInBrowser, IStockMarket } from "@/lib/utils";
+import { getUserTimeZoneInBrowser } from "@/lib/utils";
 import TwoLines from "../nonClient/twoLine";
 import { useEffect, useState } from "react";
 import GreenDot from "../nonClient/greenDot";
