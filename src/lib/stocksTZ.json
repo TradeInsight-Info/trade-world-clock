@@ -215,6 +215,18 @@
     "breakTime": ""
   },
   {
+    "name": "London International Financial Futures & Options Exchange",
+    "shortName": "LIFFE",
+    "type": "Futures, Options",
+    "city": "London",
+    "country": "United Kingdom",
+    "timezone": "GMT",
+    "offset": "UTC+0",
+    "startTime": "08:00",
+    "endTime": "16:00",
+    "breakTime": ""
+  },
+  {
     "name": "Tokyo Commodity Exchange",
     "shortName": "TOCOM",
     "type": "Futures",
@@ -334,18 +346,7 @@
     "endTime": "16:00",
     "breakTime": ""
   },
-  {
-    "name": "London International Financial Futures & Options Exchange",
-    "shortName": "LIFFE",
-    "type": "Futures, Options",
-    "city": "London",
-    "country": "United Kingdom",
-    "timezone": "GMT",
-    "offset": "UTC+0",
-    "startTime": "08:00",
-    "endTime": "16:00",
-    "breakTime": ""
-  },
+
   {
     "name": "Borsa Italiana",
     "shortName": "Borsa Italiana",

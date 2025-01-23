@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment-timezone";
 import { getUserTimeZoneInBrowser } from "@/lib/utils";
+import GreenDot from "../nonClient/greenDot";
 
 const NowTime = ({ timezone }: { timezone?: string }) => {
   const [currentTime, setCurrentTime] = useState<string>("");
@@ -12,9 +13,6 @@ const NowTime = ({ timezone }: { timezone?: string }) => {
   const browserTimezone = getUserTimeZoneInBrowser();
 
   const usingTimezone = timezone ? timezone : browserTimezone;
-
-  console.log(usingTimezone);
-
   useEffect(() => {
     const interval = setInterval(() => {
       const date = new Date();
@@ -22,7 +20,7 @@ const NowTime = ({ timezone }: { timezone?: string }) => {
       const now = theMoment
         .clone()
         .tz(usingTimezone)
-        .format("ddd MMM DD YYYY HH:mm:ss");
+        .format("ddd MMM DD, YYYY HH:mm:ss");
       setCurrentTime(now);
     }, secondUpdateDuration);
     return () => clearInterval(interval);
